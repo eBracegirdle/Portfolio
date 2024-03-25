@@ -1,7 +1,23 @@
+body {
+  margin: 0;
+  overflow: fixed; /* Prevent scrolling */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Use full viewport height */
+}
+
+#container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%; /* Adjust height as needed */
+}
+
 canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+  display: block;
+ width: 100%;
+ height: 100%;
 }
 
 #video {
@@ -20,3 +36,5 @@ main {
   font-size: 20px; /* Font size */
   z-index: 1; /* Ensure text is above the 3D scene */
 }
+
+

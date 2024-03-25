@@ -6,37 +6,63 @@
     <style>
         body {
             margin: 0;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: fixed; /* Prevent scrolling */
+            background-image: url(sheets-7722995_1280.jpg);
         }
+        
+        #container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%; /* Adjust height as needed */
+        }
+        
         canvas {
             display: block;
+            width: 100%;
+            height: 50%;
+        }
+
+        .video-container {
+            position: relative;
+            justify-content: center;
+            width: 880px; /* Adjust width as needed */
+            height: 512px; /* Adjust height as needed */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1, p {
+            color: white; /* Set color of h1 to white */
+            text-shadow: 2px 2px 2px black;
+            justify-content: center;
+            font-size: 35pxà;
         }
     </style>
 </head>
 <body>
-
+<div id="container">
 <canvas id="bg"></canvas>
+</div>
 <main>
   <header>
       <div id="text-overlay">
-          <h1>Ewan Bracegirdle</h1>
-          <p style="color: #f7f7f7;">Hello, welcome to my 2024 portfolio. I am a 3D animator and modeller based in Montréal, Quebec, Canada.</p>
-      </div>
-  </header>
+      <h1>Ewan Bracegirdle
+      </h1>
+      <p style="color: #f7f7f7;">Hello, welcome to my 2024 portfolio. I am a 3D animator and modeller based in Montréal, Quebec, Canada.</p>
+    </div>
+</header>
 </main>
-<video
-    id="video"
-    playsinline
-    webkit-playsinline
-    loop
-    autoplay
-    width="1290"
-    height="1040"
-    src="PortfolioEwanBracegirdle0001-2799.mp4"
-    type="video/mp4"
-></video>
-<div id="fallback-text-container"></div> <!-- Container for fallback text -->
-
+<div class="video-container">
+    <iframe width="880" height="512" src="https://www.youtube.com/embed/gHcqpAqL0PI?si=nagtphETy7z3dVMi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <script type="module" src="/main.js"></script>
 
 <script>
