@@ -43,7 +43,7 @@
             color: white; /* Set color of h1 to white */
             text-shadow: 2px 2px 2px black;
             justify-content: center;
-            font-size: 35pxà;
+            font-size: 35px;
         }
     </style>
 </head>
@@ -60,18 +60,11 @@
     </div>
 </header>
 </main>
-<div class="video-container">
+<div>
     <iframe width="880" height="512" src="https://www.youtube.com/embed/gHcqpAqL0PI?si=nagtphETy7z3dVMi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <script type="module" src="/main.js"></script>
 
-<script>
-    // Wait for the video to load metadata before playing
-    const video = document.getElementById('video');
-    video.onloadedmetadata = function() {
-        video.play();
-    };
-</script>
 
 </body>
 </html>
