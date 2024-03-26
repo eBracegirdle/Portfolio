@@ -1,22 +1,57 @@
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+body {
+  margin: 20px;
+  overflow: auto; /* Allow scrolling */
+  background-image: url(sheets-7722995_1280.jpg);
+  min-height: 100vh; /* Set minimum height to full viewport height */
 }
 
-#video {
-  display: none;
+#container {
+  position: relative;
+  width: 100%;
+}
+
+#video-container {
+  position: relative;
+  bottom: -200px;
+  width: 100%;
+  height: 512px; /* Height of the YouTube video */
+  z-index: 2; /* Ensure it's above other content */
+  margin-top: 90px; /* Small space between text and video container */
 }
 
 main {
-  position: fixed;
+  padding-top: 20px; /* Small space between top of page and text */
+  z-index: 1; /* Ensure it's below the video container */
 }
 
 #text-overlay {
   position: absolute;
-  top: 20px; /* Adjust as needed */
+  top: 0; /* Place at the top of the page */
   left: 20px; /* Adjust as needed */
-  color: white; /* Text color */
-  font-size: 20px; /* Font size */
-  z-index: 1; /* Ensure text is above the 3D scene */
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-size: 20px;
+  z-index: 2; /* Ensure it's above the canvas */
+  padding: 20px; /* Add padding to create space around the text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  border-radius: 10px; /* Add rounded corners to the box */
+}
+
+
+#scene {
+  position: relative;
+  width: 100%;
+  min-height: 1000px; /* Adjust minimum height to make the page longer */
+  background-color: transparent; /* Ensure canvas is visible */
+  z-index: 0; /* Ensure it's below everything else */
+  margin-top: 20px; /* Small space between video container and 3D scene */
+}
+
+canvas {
+  position: absolute;
+  top: 800px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
